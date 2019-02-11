@@ -4,13 +4,14 @@
 
 <html>
 <body>
-<h2>My blog</h2>
-<c:forEach items="${articles}" var="article">
+<h2>Online shop</h2>
+<c:forEach items="${products}" var="product">
     <tr>
-        <td>${article.title}</td>
-        <td>${article.text}</td>
+        <td>${product.name}</td>
+        <td>${product.description}</td>
+        <td>${product.price}</td>
     </tr>
 </c:forEach>
-<a href="/addArticle">Add new post</a>
+<a href="/addProduct">Add new product</a>
 </body>
 </html>

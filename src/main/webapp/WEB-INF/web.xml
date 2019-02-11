@@ -4,4 +4,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>SuperServlet</servlet-name>
+        <servlet-class>com.pablito.servlet.SuperServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SuperServlet</servlet-name>
+        <url-pattern>/servlet</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -4,12 +4,15 @@
     <title>Add article</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/addArticle" method="post">
+<form action="${pageContext.request.contextPath}/addProduct" method="post">
     <p>Title
-        <input type="text" name="title"/>
+        <input type="text" name="name"/>
     </p>
-    <p>Text
-        <textarea name="text"></textarea>
+    <p>Price
+        <input type="text" name="price"/>
+    </p>
+    <p>Description
+        <textarea name="description"></textarea>
     </p>
     <p>Submit
         <input type="submit" name="submit" value="submit"/>

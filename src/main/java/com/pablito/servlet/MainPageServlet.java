@@ -1,8 +1,7 @@
 package com.pablito.servlet;
 
-import com.pablito.db.ArticleDb;
+import com.pablito.db.ProductDb;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,8 +13,8 @@ import java.io.IOException;
 public class MainPageServlet extends HttpServlet {
     @Override
     protected void doGet(final HttpServletRequest httpServletRequest, final HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        final ArticleDb db = ArticleDb.getInstance();
-        httpServletRequest.setAttribute("articles", db.getArticles());
+        final ProductDb db = ProductDb.getInstance();
+        httpServletRequest.setAttribute("products", db.getProducts());
         httpServletRequest.getRequestDispatcher("/WEB-INF/index.jsp").forward(httpServletRequest, httpServletResponse);
     }
 }
