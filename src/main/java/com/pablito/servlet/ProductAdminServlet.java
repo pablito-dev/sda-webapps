@@ -24,9 +24,10 @@ public class ProductAdminServlet extends HttpServlet {
             throws ServletException, IOException {
         final String name = httpServletRequest.getParameter("name");
         final String description = httpServletRequest.getParameter("description");
+        final String category = httpServletRequest.getParameter("category");
         final int price = Integer.parseInt(httpServletRequest.getParameter("price"));
 
-        long id = productDb.addNewProduct(name, description, price);
+        long id = productDb.addNewProduct(name, description, price, category);
         httpServletResponse.sendRedirect(String.format("/product?id=%s", id));
     }
 

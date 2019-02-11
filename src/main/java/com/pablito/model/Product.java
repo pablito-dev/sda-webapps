@@ -8,13 +8,15 @@ public class Product {
     private String name;
     private String description;
     private long price;
+    private String category;
 
-    public Product(Long id, LocalDateTime creationDate, String name, String description, long price) {
+    public Product(Long id, LocalDateTime creationDate, String name, String description, long price, String category) {
         this.id = id;
         this.creationDate = creationDate;
         this.name = name;
         this.description = description;
         this.price = price;
+        this.category = category;
     }
 
     public Long getId() {
@@ -55,5 +57,13 @@ public class Product {
 
     public void setPrice(long price) {
         this.price = price;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

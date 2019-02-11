@@ -14,6 +14,9 @@
     <p>Description
         <textarea name="description"></textarea>
     </p>
+    <p>Category
+        <input type="text" name="category"/>
+    </p>
     <p>Submit
         <input type="submit" name="submit" value="submit"/>
     </p>
