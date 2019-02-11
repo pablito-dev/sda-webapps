@@ -13,5 +13,6 @@
     </tr>
 </c:forEach>
 <a href="/addProduct">Add new product</a>
+<a href="/login">Log in</a>
 </body>
 </html>
