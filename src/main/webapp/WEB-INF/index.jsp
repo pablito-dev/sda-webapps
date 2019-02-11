@@ -12,7 +12,12 @@
         <td>${product.price}</td>
     </tr>
 </c:forEach>
-<a href="/addProduct">Add new product</a>
-<a href="/login">Log in</a>
+<a href="${pageContext.request.contextPath}/addProduct">Add new product</a>
+<% if (session.getAttribute("user") == null) { %>
+    <a href="${pageContext.request.contextPath}/login">Log in</a>
+<% } else {%>
+    <p>Logged as ${sessionScope["user"]["userName"]}</p>
+    <a href="${pageContext.request.contextPath}/logout">Log out</a>
+<% } %>
 </body>
 </html>
