@@ -14,7 +14,7 @@
         <p>Category: ${product.category}</p>
     </c:when>
     <c:otherwise>
-        <p>${param.name}</p>
+        <p><a href="${pageContext.request.contextPath}/product?id=${param.id}">${param.name}</a></p>
         <p>${param.description}</p>
         <p>Price: ${param.price}</p>
         <p>Category: ${param.category}</p>

@@ -5,6 +5,7 @@ import com.pablito.model.Product;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,6 +26,7 @@ public class ProductViewServlet extends HttpServlet {
         if (optionalProduct.isPresent()) {
             final Product product = optionalProduct.get();
             httpServletRequest.setAttribute("product", product);
+            httpServletResponse.addCookie(new Cookie("lastProductView", String.valueOf(id)));
             httpServletRequest.getRequestDispatcher("/WEB-INF/product.jsp").forward(httpServletRequest, httpServletResponse);
         } else {
             httpServletRequest.getRequestDispatcher("/WEB-INF/index.jsp").forward(httpServletRequest, httpServletResponse);

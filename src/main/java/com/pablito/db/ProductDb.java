@@ -14,9 +14,12 @@ public class ProductDb {
 
     private ProductDb() {
         this.products = new LinkedList<>();
-        this.products.add(new Product(0L, LocalDateTime.now(), "Supercolider", "After you attack a minion, force it to attack one of its neighbors.", 5, "Warrior"));
-        this.products.add(new Product(1L, LocalDateTime.now(), "Bloodclaw", "Battlecry: Deal 5 damage to your hero.", 1, "Paladin"));
-        this.products.add(new Product(2L, LocalDateTime.now(), "Headhunter's Hatchet", "Battlecry: If you control a Beast, gain +1 Durability.", 2, "Hunter"));
+        this.products.add(new Product(0L, LocalDateTime.now(), "Supercolider",
+                "After you attack a minion, force it to attack one of its neighbors.", 5, "Warrior"));
+        this.products.add(new Product(1L, LocalDateTime.now(), "Bloodclaw",
+                "Battlecry: Deal 5 damage to your hero.", 1, "Paladin"));
+        this.products.add(new Product(2L, LocalDateTime.now(), "Headhunter's Hatchet",
+                "Battlecry: If you control a Beast, gain +1 Durability.", 2, "Hunter"));
     }
 
     public static ProductDb getInstance() {
